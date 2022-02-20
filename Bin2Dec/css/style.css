@@ -1,0 +1,28 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+body{
+    background-color: #282828;
+    color: white;
+}
+.header{
+    text-align: center;
+}
+.centralBlock{
+    background-color: grey;
+    padding: 2%;
+    text-align: center;
+    margin: 0% 5em;
+}
+.convertButton{
+    margin: 1%;
+    padding: 0.5em 4em;
+}
+.results{
+    background-color: #aaaaaa;
+    color: white;
+    font-weight: bold;
+    padding: 0.3em 2em;
+    margin: 0 40em;
+    text-align: left;
+}
