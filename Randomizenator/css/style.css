@@ -5,7 +5,7 @@ body {
     text-align: center;
   }
   /* https://colorhunt.co/palette/65e8923994d6354abf3d289b */
-  button {
+  .randomizeBtn{
     margin: 1% 0%;
     border: none;
     background-color: #00e676;
@@ -15,14 +15,24 @@ body {
     padding: 1% 1.5%;
     box-shadow: 0.4em 0.4em #354abf;
   }
-  button:hover {
+  .randomizeBtn:hover {
     color: white;
   }
-  button:active {
+  .randomizeBtn:active {
     background-color: #3ce276;
     transition-duration: 150ms;
     color: white;
     box-shadow: 0.3em 0.3em #3043b0;
+    transform: translate(0.1em, 0.1em);
+  }
+  .diceBtn{
+    box-shadow: none;
+  }
+  .diceBtn:hover{
+    box-shadow: none;
+  }
+  .diceBtn:active{
+    box-shadow: none;
     transform: translate(0.1em, 0.1em);
   }
   .footer {
@@ -44,7 +54,7 @@ body {
   }
   .banner {
     margin: 1em 40%;
-    padding: 1.3em 1.3em;
+    padding: 1em 1.3em;
     background-color: #3949ab;
     font-weight: bold;
     text-align: center;
