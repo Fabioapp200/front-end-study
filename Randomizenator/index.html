@@ -14,15 +14,21 @@
 
 <body>
     <h1>Randomizenator 2000</h1>
-    <input type="number" id="minInput" placeholder="1" value="1"></input> <br>
-    <input type="number" id="maxInput" placeholder="10" value="100"></input> <br>
+    <div class="inputColumn">
+        <input class="inputRow" type="number" id="minInput" value="1"></input>
+        <span id="inputColumn"></span>
+        <input class="inputRow" type="number" id="maxInput" value="100"></input>
+    </div>
+    <br>
+    <script src="js/adapt.js"></script>
+
     <button class="randomizeBtn" onclick='inputWatch()'>Randomize!</button>
 
     <div class="banner" id="banner">
         <div id="result">Result: </div>
     </div>
-    
-    <div class="banner">
+
+    <div class="banner diceBanner">
         <button class="randomizeBtn diceBtn" onclick="Randomize(1,2)">D2</button>
         <button class="randomizeBtn diceBtn" onclick="Randomize(1,4)">D4</button>
         <button class="randomizeBtn diceBtn" onclick="Randomize(1,6)">D6</button>

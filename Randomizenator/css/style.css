@@ -3,9 +3,12 @@ body {
     color: white;
     background: #3994d6;
     text-align: center;
-  }
-  /* https://colorhunt.co/palette/65e8923994d6354abf3d289b */
-  .randomizeBtn{
+}
+
+
+/* https://colorhunt.co/palette/65e8923994d6354abf3d289b */
+
+.randomizeBtn {
     margin: 1% 0%;
     border: none;
     background-color: #00e676;
@@ -14,69 +17,87 @@ body {
     font-size: 1.5em;
     padding: 1% 1.5%;
     box-shadow: 0.4em 0.4em #354abf;
-  }
-  .randomizeBtn:hover {
+}
+
+.randomizeBtn:hover {
     color: white;
-  }
-  .randomizeBtn:active {
+}
+
+.randomizeBtn:active {
     background-color: #3ce276;
     transition-duration: 150ms;
     color: white;
     box-shadow: 0.3em 0.3em #3043b0;
     transform: translate(0.1em, 0.1em);
-  }
-  .diceBtn{
+}
+
+.diceBtn {
     box-shadow: none;
-  }
-  .diceBtn:hover{
+}
+
+.diceBtn:hover {
     box-shadow: none;
-  }
-  .diceBtn:active{
+}
+
+.diceBtn:active {
     box-shadow: none;
     transform: translate(0.1em, 0.1em);
-  }
-  .footer {
+}
+
+.footer {
     background: white;
     color: black;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-  }
-  input {
+}
+
+.inputRow {
+    content: "\a";
+    white-space: pre;
+}
+
+input {
     margin: 1% 0%;
     border: none;
     padding: 10px 10px;
-  }
-  input[type="text"]:focus {
+}
+
+input[type="text"]:focus {
     background-color: #eeeeee;
     transition-duration: 300ms;
-  }
-  .banner {
+}
+
+.banner {
     margin: 1em 40%;
     padding: 1em 1.3em;
     background-color: #3949ab;
     font-weight: bold;
     text-align: center;
-  }
-  .howto{
+}
+
+.howto {
     margin: 1em 30%;
-  }
-  
-  /**
+}
+
+
+/**
    * ==============================================
    * Dot Typing
    * ==============================================
    */
-  .loading {
+
+.loading {
     display: block;
     margin-right: auto;
     margin-left: 45%;
     margin-top: 10%;
     margin-bottom: 10%;
     width: 50%;
-  }
-  .dot-typing {
+}
+
+.dot-typing {
     position: relative;
     left: -9999px;
     width: 10px;
@@ -86,36 +107,106 @@ body {
     color: #00e676;
     box-shadow: 9984px 0 0 0 #00e676, 9999px 0 0 0 #00e676, 10014px 0 0 0 #00e676;
     animation: dotTyping 1.5s infinite linear;
-  }
-  
-  @keyframes dotTyping {
+}
+
+@keyframes dotTyping {
     0% {
-      box-shadow: 9984px 0 0 0 #00e676, 9999px 0 0 0 #00e676,
-        10014px 0 0 0 #00e676;
+        box-shadow: 9984px 0 0 0 #00e676, 9999px 0 0 0 #00e676, 10014px 0 0 0 #00e676;
     }
     16.667% {
-      box-shadow: 9984px -10px 0 0 #00e676, 9999px 0 0 0 #00e676,
-        10014px 0 0 0 #00e676;
+        box-shadow: 9984px -10px 0 0 #00e676, 9999px 0 0 0 #00e676, 10014px 0 0 0 #00e676;
     }
     33.333% {
-      box-shadow: 9984px 0 0 0 #00e676, 9999px 0 0 0 #00e676,
-        10014px 0 0 0 #00e676;
+        box-shadow: 9984px 0 0 0 #00e676, 9999px 0 0 0 #00e676, 10014px 0 0 0 #00e676;
     }
     50% {
-      box-shadow: 9984px 0 0 0 #00e676, 9999px -10px 0 0 #00e676,
-        10014px 0 0 0 #00e676;
+        box-shadow: 9984px 0 0 0 #00e676, 9999px -10px 0 0 #00e676, 10014px 0 0 0 #00e676;
     }
     66.667% {
-      box-shadow: 9984px 0 0 0 #00e676, 9999px 0 0 0 #00e676,
-        10014px 0 0 0 #00e676;
+        box-shadow: 9984px 0 0 0 #00e676, 9999px 0 0 0 #00e676, 10014px 0 0 0 #00e676;
     }
     83.333% {
-      box-shadow: 9984px 0 0 0 #00e676, 9999px 0 0 0 #00e676,
-        10014px -10px 0 0 #00e676;
+        box-shadow: 9984px 0 0 0 #00e676, 9999px 0 0 0 #00e676, 10014px -10px 0 0 #00e676;
     }
     100% {
-      box-shadow: 9984px 0 0 0 #00e676, 9999px 0 0 0 #00e676,
-        10014px 0 0 0 #00e676;
+        box-shadow: 9984px 0 0 0 #00e676, 9999px 0 0 0 #00e676, 10014px 0 0 0 #00e676;
     }
-  }
-  
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* Styles */
+    .banner {
+        margin: 1em 5%;
+        padding: 1em 1em;
+    }
+    .diceBanner {
+        padding: 4% 2%;
+    }
+    input {
+        width: 35%;
+        margin: 2% 2%;
+    }
+    .inputColumn {
+        float: left;
+        width: 100%;
+    }
+    .inputRow:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+/* Smartphones (landscape) ----------- */
+
+@media only screen and (min-width: 321px) {
+    /* Styles */
+}
+
+
+/* Smartphones (portrait) ----------- */
+
+@media only screen and (max-width: 320px) {
+    /* Styles */
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .banner {
+        margin: 1em 30%;
+    }
+}
+
+
+/* iPads (landscape) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    /* Styles */
+}
+
+
+/* iPads (portrait) ----------- */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+    /* Styles */
+}
+
+
+/* Desktops and laptops ----------- */
+
+@media only screen and (min-width: 1224px) {
+    /* Styles */
+}
+
+
+/* Large screens ----------- */
+
+@media only screen and (min-width: 1824px) {
+    /* Styles */
+}

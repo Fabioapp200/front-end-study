@@ -19,6 +19,7 @@ function inputWatch() {
         alert("Both input fields should be filled in. Try again!");
     }
 }
+
 function Randomize(min, max) {
     const url =
         "https://www.random.org/integers/?num=1&min=" +
@@ -36,7 +37,10 @@ function Randomize(min, max) {
             document.getElementById("banner").innerHTML =
                 "<p id='result'>" + "Result: " + result + "</p>";
         })
-        .catch(function () {
+        .catch(function() {
             console.log("nao entrou");
         });
+}
+if (screen.width >= 426) {
+    console.log('macaco');
 }
