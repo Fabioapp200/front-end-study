@@ -1,0 +1,16 @@
+body {
+    background-color: #E2E8DD;
+}
+
+.header {
+    background-color: #4E5340;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 1% 0%;
+}
+
+.inputs {
+    margin: 3% 30%;
+}
