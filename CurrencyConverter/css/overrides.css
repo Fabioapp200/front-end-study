@@ -11,3 +11,7 @@
     background-color: #383b2f;
     border-color: #31347B;
 }
+.dropdown-menu {
+    max-height: 50vh;
+    overflow-y: auto;
+}
