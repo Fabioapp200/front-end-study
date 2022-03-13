@@ -3,7 +3,8 @@ var requestOptions = {
     redirect: 'follow'
 };
 
-fetch("https://api.getgeoapi.com/v2/currency/convert?api_key=f4d469f5612fbc93de8286b5517c7fd5b9531831&from=BRL", requestOptions)
+const url = "https://api.getgeoapi.com/v2/currency/convert?api_key=f4d469f5612fbc93de8286b5517c7fd5b9531831&from=BRL"; 
+fetch(url, requestOptions)
     .then(response => response.text())
     .then(result => parser(result))
     .catch(error => console.log('error', error));
@@ -40,6 +41,16 @@ function parser(jsondata) {
 }
 
 function changeButtonText(id, symbol, rate) {
+    
+    if(id == 1)
+    {
+        window.currentRate01 = rate;
+    }
+    else
+    {
+        window.currentRate02 = rate;
+    }
+
     document.getElementById("button" + id).innerHTML = symbol;
     document.getElementById("input" + id).value = rate;
 }
