@@ -3,7 +3,7 @@ var requestOptions = {
     redirect: 'follow'
 };
 
-const url = "https://api.getgeoapi.com/v2/currency/convert?api_key=f4d469f5612fbc93de8286b5517c7fd5b9531831&from=BRL"; 
+const url = "https://api.getgeoapi.com/v2/currency/convert?api_key=f4d469f5612fbc93de8286b5517c7fd5b9531831&from=USD"; 
 fetch(url, requestOptions)
     .then(response => response.text())
     .then(result => parser(result))
@@ -36,6 +36,8 @@ function parser(jsondata) {
             elements[index].innerHTML = elements[index].innerHTML +
                 "<li><a class='dropdown-item py-1 my-0'" +
                 onclick + ">" + currencySymbol + " - " + currencyName;
+
+            //console.log(currencySymbol + "\t" + rate);
         }
     }
 }
@@ -45,12 +47,13 @@ function changeButtonText(id, symbol, rate) {
     if(id == 1)
     {
         window.currentRate01 = rate;
+        window.currentSymbol01 = symbol;
     }
     else
     {
         window.currentRate02 = rate;
+        window.currentSymbol02 = symbol;
     }
 
     document.getElementById("button" + id).innerHTML = symbol;
-    document.getElementById("input" + id).value = rate;
 }
