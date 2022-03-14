@@ -12,12 +12,12 @@ fetch(url, requestOptions)
 function parser(jsondata) {
     jsondata = JSON.parse(jsondata);
 
-    var elements = document.getElementsByClassName("currency-list");
+    let elements = document.getElementsByClassName("currency-list");
 
     const cur = jsondata['rates'];
-    var symbols = Object.keys(cur).sort();
+    const symbols = Object.keys(cur).sort();
 
-    dict = {};
+    let dict = {};
 
     for (let i = 0; i < symbols.length; i++) {
         const element = symbols[i];
@@ -28,16 +28,14 @@ function parser(jsondata) {
     }
 
     for (let index = 0; index < elements.length; index++) {
-        for (var currencySymbol in dict) {
-            var currencyName = dict[currencySymbol]['name'];
-            var rate = dict[currencySymbol]['rate'];
-            var onclick = "onclick=changeButtonText(" + (index + 1) + "," + "'" + currencySymbol + "'" + "," + rate + ");";
+        for (let currencySymbol in dict) {
+            let currencyName = dict[currencySymbol]['name'];
+            let rate = dict[currencySymbol]['rate'];
+            let onclick = "onclick=changeButtonText(" + (index + 1) + "," + "'" + currencySymbol + "'" + "," + rate + ");";
 
             elements[index].innerHTML = elements[index].innerHTML +
                 "<li><a class='dropdown-item py-1 my-0'" +
                 onclick + ">" + currencySymbol + " - " + currencyName;
-
-            //console.log(currencySymbol + "\t" + rate);
         }
     }
 }
