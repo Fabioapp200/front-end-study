@@ -1,0 +1,20 @@
+body {
+    background-color: #BDD4E7;
+}
+
+.header {
+    background-color: #212227;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 1% 0%;
+}
+
+.inputs {
+    
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 960px) {
+
+}
