@@ -1,6 +1,21 @@
 ////////////////////////////////////////////////////////////////////////////////////////
 //Processing Data
 
+var x = document.getElementById("demo");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    console.log("Geolocation is not supported by this browser.");
+  }
+}
+
+function showPosition(position) {
+  window.lat = position.coords.latitude;
+  window.lon = position.coords.longitude;
+}
+getLocation();
+
 function getValues(data, cityName, countryName) {
     data = JSON.parse(data);
 
@@ -27,6 +42,15 @@ function getValues(data, cityName, countryName) {
     document.getElementById("minTempText").innerHTML = "Min: " + minTemp + "°C ";
     document.getElementById("weatherIcon").innerHTML = `<img src="${icon}">`;
     document.getElementById("locationText").innerHTML = cityName + "/" + countryName;
+
+
+    var link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+        link = document.createElement("link");
+        link.rel = "icon";
+        document.getElementsByTagName("head")[0].appendChild(link);
+    }
+    link.href = icon;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -50,8 +74,11 @@ fetch(IPUri, requestOptions)
             .then(function (res2) {
                 jsondata = JSON.parse(res2);
                 const api_key = "a7b6c24e8b4e46c984193533bc467d14";
-                let lon = jsondata['location']['longitude'];
                 let lat = jsondata['location']['latitude'];
+                let lon = jsondata['location']['longitude'];
+                lat = window.lat;
+                lon = window.lon;
+                console.log(lat, lon);
                 const cityName = jsondata["city"]["name"];
                 const countryName = jsondata["country"]["name"];
                 const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}`
