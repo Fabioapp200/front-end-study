@@ -1,10 +1,10 @@
 body {
+    text-align: center;
     background-color: #BDD4E7;
 }
 
 .header {
     background-color: #212227;
-    text-align: center;
     color: white;
     font-weight: bold;
     font-size: 2em;
@@ -15,6 +15,11 @@ body {
     
 }
 
+.weatherBox{
+    font-size: 2.5em;
+    font-weight: bold;
+    
+}
 @media only screen and (min-device-width: 320px) and (max-device-width: 960px) {
 
 }
