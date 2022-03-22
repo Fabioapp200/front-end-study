@@ -10,8 +10,8 @@ function getLocation() {
 }
 
 function showPosition(position) {
-  window.lat = position.coords.latitude;
-  window.lon = position.coords.longitude;
+  lat = position.coords.latitude;
+  lon = position.coords.longitude;
 }
 getLocation();
 
