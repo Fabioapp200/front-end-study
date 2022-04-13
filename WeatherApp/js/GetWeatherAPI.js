@@ -1,19 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////
 //Processing Data
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    console.log("Geolocation is not supported by this browser.");
-  }
-}
 
-function showPosition(position) {
-  lat = position.coords.latitude;
-  lon = position.coords.longitude;
-}
-getLocation();
 
 function getValues(data, cityName, countryName) {
     data = JSON.parse(data);
@@ -75,9 +63,6 @@ fetch(IPUri, requestOptions)
                 const api_key = "a7b6c24e8b4e46c984193533bc467d14";
                 let lat = jsondata['location']['latitude'];
                 let lon = jsondata['location']['longitude'];
-                lat = window.lat;
-                lon = window.lon;
-                console.log(lat, lon);
                 const cityName = jsondata["city"]["name"];
                 const countryName = jsondata["country"]["name"];
                 const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}`
