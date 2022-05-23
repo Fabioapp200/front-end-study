@@ -14,14 +14,13 @@
     <script src="https://rfcstudios.com.br/resources/popper.min.js"></script>
     <link href="https://rfcstudios.com.br/resources/material-icons.css" rel="stylesheet">
     <link href="https://rfcstudios.com.br/resources/material-icons-outlined.css" rel="stylesheet">
-    
-    <script src="js/bootstrap-select.min.js"></script>
-    <link href="css/bootstrap-select.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/loader.css">
-    <!-- <script src="js/GetWeatherAPI.js"></script> -->
+    <link rel="stylesheet" href="css/filtered-dropdown.css">
+
     <script src="js/GetWeatherGEO.js"></script>
+    <script src="js/FilteredDropdown.js"></script>
 
 </head>
 
@@ -47,14 +46,19 @@
 
     <hr class="bg-danger border-2 border-top border-dark divider">
 
-    <div>
-        <select class="selectpicker">
-            <option>Mustard</option>
-            <option>Ketchup</option>
-            <option>Barbecue</option>
-          </select>
-          
-    </div>
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+          <a href="#about">About</a>
+          <a href="#base">Base</a>
+          <a href="#blog">Blog</a>
+          <a href="#contact">Contact</a>
+          <a href="#custom">Custom</a>
+          <a href="#support">Support</a>
+          <a href="#tools">Tools</a>
+        </div>
+      </div>
 
 
 
